@@ -19,7 +19,7 @@
     "@jswork/next": "^1.0.9",
     "@jswork/next-collection": "^1.0.1",
     "@jswork/next-date": "^1.0.12",
-    "@jswork/next-range-date": "^1.0.2",
+    "@jswork/next-range-date": "^1.0.3",
     "@oclif/core": "^1",
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.0.1",
