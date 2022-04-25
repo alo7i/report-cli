@@ -12,6 +12,7 @@ export default class Index extends Command {
   static description = "Generate monthly.";
 
   static flags = {
+    format: Flags.string({ char: "f", description: "Date format.", default: "m.dd", }),
     target: Flags.string({ char: "d", description: "Special day." }),
     verbose: Flags.boolean({ char: "v", description: "Show logs." }),
   };
@@ -32,7 +33,7 @@ export default class Index extends Command {
     const dates = nx.Collection.diff(rangeDates, vacation);
     const res = dates
       .filter((date) => exchange.includes(date) || !nx.Date.isWeekend(date))
-      .map((date) => nx.Date.format(date, "mm.dd") + " - " + "日志: xx");
+      .map((date) => nx.Date.format(date, flags.format) + " - " + "日志: xx");
     const result = res.join("\n");
     flags.verbose && this.log(result);
     fs.writeFileSync(args.filename, result);
