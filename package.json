@@ -1,15 +1,13 @@
 {
-  "name": "report-cli",
-  "version": "0.0.0",
+  "name": "@jswork/report-cli",
+  "version": "1.0.0",
   "description": "Report helper.",
-  "author": "feizheng",
+  "author": "aric.zheng",
   "bin": {
     "report-cli": "./bin/run"
   },
-  "homepage": "https://github.com/report-cli/https://github.com/alo7i/report-cli",
   "license": "MIT",
   "main": "dist/index.js",
-  "repository": "report-cli/https://github.com/alo7i/report-cli",
   "files": [
     "/bin",
     "/dist",
@@ -17,15 +15,22 @@
     "/oclif.manifest.json"
   ],
   "dependencies": {
+    "@jswork/calendar-vacation": "^1.0.1",
+    "@jswork/next": "^1.0.9",
+    "@jswork/next-collection": "^1.0.1",
+    "@jswork/next-date": "^1.0.12",
+    "@jswork/next-range-date": "^1.0.2",
     "@oclif/core": "^1",
     "@oclif/plugin-help": "^5",
-    "@oclif/plugin-plugins": "^2.0.1"
+    "@oclif/plugin-plugins": "^2.0.1",
+    "node-fetch": "^2.6.7"
   },
   "devDependencies": {
     "@oclif/test": "^2",
     "@types/chai": "^4",
     "@types/mocha": "^9.0.0",
     "@types/node": "^16.9.4",
+    "@types/node-fetch": "^2.6.1",
     "chai": "^4",
     "eslint": "^7.32.0",
     "eslint-config-oclif": "^4",
@@ -45,13 +50,7 @@
     "plugins": [
       "@oclif/plugin-help",
       "@oclif/plugin-plugins"
-    ],
-    "topicSeparator": " ",
-    "topics": {
-      "hello": {
-        "description": "Say hello to the world and others"
-      }
-    }
+    ]
   },
   "scripts": {
     "build": "shx rm -rf dist && tsc -b",
