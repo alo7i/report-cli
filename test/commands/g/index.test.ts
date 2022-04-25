@@ -1,10 +1,13 @@
 import { expect, test } from "@oclif/test";
+import fs from "fs";
 
-describe("hello", () => {
+describe("report-cli should create .tmp.md file", () => {
+  fs.existsSync(".tmp.md") && fs.rmSync(".tmp.md");
+
   test
     .stdout()
-    .command(["g", "friend", "--from=oclif"])
-    .it("runs hello cmd", (ctx) => {
-      expect(ctx.stdout).to.contain("hello friend from oclif!");
+    .command(["g"])
+    .it("runs generate report", (ctx) => {
+      expect(fs.existsSync(".tmp.md")).to.eq(true);
     });
 });

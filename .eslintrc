@@ -7,8 +7,5 @@
   "extends": [
     "oclif",
     "oclif-typescript"
-  ],
-  "globals": {
-    "nx": true
-  }
+  ]
 }
