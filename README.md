@@ -1,6 +1,13 @@
 # report-cli
 > Report helper.
 
+## installation
+```shell
+git clone git@github.com:alo7i/report-cli.git
+# git clone https://github.com/alo7i/report-cli.git
+cd report-cli && npm link
+```
+
 ## usage
 ```shell
 # 当前月份/.tmp.md 文件
