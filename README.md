@@ -3,6 +3,10 @@
 
 ## installation
 ```shell
+# public
+npm i -g @jswork/report-cli
+
+# private
 git clone git@github.com:alo7i/report-cli.git
 # git clone https://github.com/alo7i/report-cli.git
 cd report-cli && npm link
